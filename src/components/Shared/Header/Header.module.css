@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #D89362;
+  padding-left: 2rem;
+}
+
+/* Navigation for desktop */
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide navigation on smaller screens */
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+}
+
+.nav li {
+  margin-left: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;  /* Added missing px */
+}
+
+/* CTA Button */
+.cta {
+  background-color: #d99633;
+  color: white;
+  border: none;
+  padding: 1.1rem 1.1rem;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; /* Added missing px */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #B84D01;
+}
+
+/* Hamburger Menu Button (for mobile screens) */
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+    color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    display: none; /* Hide button on mobile */
+  }
+
+  .menuOpen .cta {
+    display: none; /* Ensure it stays hidden when menu is open */
+  }
+}

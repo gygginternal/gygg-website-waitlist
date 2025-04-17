@@ -1,0 +1,221 @@
+.waitlistContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.waitlistContainer::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -25%;
+  width: 150%;
+  height: 100%;
+  background-image: radial-gradient(ellipse at center,
+      rgba(217, 150, 51, 0.2) 0%,
+      rgba(217, 150, 51, 0.05) 50%,
+      rgba(248, 248, 248, 0) 70%);
+  transform: skew(-10deg, 0);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.waitlistBox {
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 4rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.textContainer {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.word {
+  color: #d99633;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #666;
+  margin-bottom: 3.5rem;
+}
+
+.notificationText {
+  font-size: 1.0rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.emailSignup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emailInput {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #bbbbbb;
+  border-radius: 16px 0 0 16px;
+  width: 100%;
+  max-width: none;
+  transition: border-color 0.3s ease;
+  flex-grow: 1;
+}
+
+.emailInput:focus {
+  border-color: #d99633;
+  outline: none;
+}
+
+.signupButton {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #d99633;
+  color: white;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  cursor: pointer;
+  width: auto;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.signupButton:hover {
+  background-color: #c28529;
+}
+
+.signupButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 1024px) {
+  .waitlistContainer {
+    padding: 3rem;
+  }
+
+  .waitlistBox {
+    padding: 3rem;
+  }
+
+  .textContainer {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .emailSignup {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .waitlistContainer {
+    padding: 2rem;
+  }
+
+  .waitlistBox {
+    padding: 2rem;
+  }
+
+  .textContainer {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .emailSignup {
+    max-width: 480px;
+  }
+
+  .emailInput,
+  .signupButton {
+    font-size: 1rem;
+    padding: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .waitlistContainer {
+    padding: 1.5rem;
+  }
+
+  .waitlistBox {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .notificationText {
+    font-size: 0.9rem;
+  }
+
+  .emailSignup {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .emailInput,
+  .signupButton {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: none;
+    border-radius: 16px;
+  }
+
+  .emailInput {
+    margin-bottom: 0.5rem;
+  }
+}

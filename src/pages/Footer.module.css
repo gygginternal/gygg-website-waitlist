@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.footer {
+    padding: 2rem;
+    background-color: #f8f8f8;
+    font-family: 'Inter', sans-serif;
+}
+
+.topSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.mailButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 32px;
+    padding: 10px 15px;
+    background-color: #eeeeee;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    font-family: 'Inter', sans-serif; /* Ensure Inter is applied */
+    font-size: 20px; /* Fix missing px */
+    font-weight: 500;
+    text-decoration: none; /* Ensures it looks like a button */
+}
+
+.mailButton img {
+    margin-right: 0.5rem;
+}
+
+.middleSection {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3.0rem;
+    font-weight: 900;
+    color: #D89362;
+    cursor: pointer; /* Ensures it's clickable */
+}
+
+.logo a {
+    text-decoration: none !important;
+}
+
+.bottomSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottomContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 18px; /* Fix missing px */
+    color: #666;
+}
+
+.bottomContent a {
+    text-decoration: none;
+}
+
+.bottomContent a:hover {
+    text-decoration: underline;
+}

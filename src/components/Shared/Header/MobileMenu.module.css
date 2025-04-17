@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Mobile Menu - Slide Down with Glassmorphism */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.2); /* Glass effect */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem 1.5rem;
+  z-index: 100;
+  overflow-y: auto;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+}
+
+/* Close Button */
+.closeButton {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.navLink {
+  color: black; /* Text color set to black */
+  text-decoration: none;
+  padding: 1rem;
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  color: #d99633;
+}
+
+/* CTA Button in Mobile Menu */
+.cta {
+  display: block;
+  background-color: #d99633;
+  color: white; /* Text color set to black */
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #B84D01;
+}
+
+/* Mobile Menu Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Light glass effect */
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  transition: opacity 0.3s ease-in-out;
+}
