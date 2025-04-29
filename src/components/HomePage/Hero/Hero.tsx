@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
   };
 
   useEffect(() => {
-    const targetDate = new Date(2025, 4, 3);
+    const targetDate = new Date(2025, 5, 3);
     targetDate.setHours(targetDate.getHours() - 4);
   
     const updateTimer = () => {
